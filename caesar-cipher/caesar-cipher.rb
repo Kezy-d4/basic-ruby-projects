@@ -1,3 +1,5 @@
+require 'pry-byebug'
+
 # Loop through the given string and return a new string with each letter 
 # shifted the specified number of positions forward (right) in the alphabet.
 # Preserve original whitespace, case, and non-letter characters, and
@@ -6,6 +8,7 @@
 # string = "What a string!"
 # forward_shift = 5
 
+# helper methods
 def is_lower_letter?(string)
   ("a".."z").include?(string)
 end
@@ -39,7 +42,14 @@ def shift_letter(letter, forward_shift)
   end
 end
 
-def caesar_cipher(string, forward_shift)
+# main method
+def caesar_cipher
+  puts "Enter a message to be encrypted."
+  string = gets.chomp
+
+  puts "Enter the forward shift factor."
+  forward_shift = gets.chomp.to_i
+
   ciphered = string.split("").map do |character|
 
     if is_letter?(character)
@@ -50,11 +60,11 @@ def caesar_cipher(string, forward_shift)
     end
   end
 
+  puts "Your message has been encrypted according to your forward shift factor."
   ciphered.join
 end 
 
-p caesar_cipher("What a string!", 5)
-
+p caesar_cipher
 
 
 
