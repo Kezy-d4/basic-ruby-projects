@@ -52,7 +52,8 @@ THE PLAN #1
   end.
 
 THE PLAN #2
-  
+  initialize counter variable swap_counter to 0.
+
 
 
 

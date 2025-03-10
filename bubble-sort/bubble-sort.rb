@@ -3,7 +3,6 @@
 
 def bubble_sort(integers)
   passes_made = 0 # debugging
-
   
   integers.length.times do 
     swap_made = false
@@ -31,3 +30,4 @@ end
 
 p bubble_sort([4,3,78,2,0,2])
 p bubble_sort([0,1,2,3,3,4,5])
+p bubble_sort([3,2,1,0])
