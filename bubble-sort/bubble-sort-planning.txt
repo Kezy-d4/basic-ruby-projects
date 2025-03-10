@@ -1,0 +1,27 @@
+TASK
+  Build a method #bubble_sort that takes an array and returns a sorted array.
+  It must use the bubble sort methodology.
+
+PARAMETERS
+  @param integers [Array] The array of integers to be sorted in ascending order. 
+
+RETURNS
+  @return [Array] The array of integers now sorted in ascending order. 
+
+EXAMPLE
+  bubble_sort([4,3,78,2,0,2])
+  => [0,2,2,3,4,78]
+
+NOTES
+  - The worst case scenario for the bubble sort algorithm requires 
+    a number of pass-throughs equal to the number of elements (n)-1.
+
+  - Even once the array has been correctly sorted, the algorithm 
+    must still perform one final pass-through without
+    encountering any swaps before returning the sorted array. 
+    This is necessary to verify that no further sorting is required. 
+
+  - It can be observed that following (k) pass-throughs of the array,
+    the last (k) elements will be sorted in their correct position. 
+    Therefore, the algorithm can be optimized by not evaluating those 
+    elements on future pass-throughs. 
