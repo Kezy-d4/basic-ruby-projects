@@ -26,14 +26,33 @@ NOTES
     Therefore, the algorithm can be optimized by not evaluating those 
     elements on future pass-throughs. 
 
-THE PLAN
-Method #bubble_sort(integers)
+THE PLAN #1
+  Method #bubble_sort(integers)
 
-  Loop through the argument array of integers. 
+    n = number of elements in integers.
+    n times do,
+      initialize swap_made to false.
 
-    For each integer, is there an integer directly to the right to compare with?
-      If so, compare to check if the integer on the right is less than. 
-        If so, swap the positions of the two integers.
-        If not, this pass is complete.
+      for each integer in integers, 
+        initialize next_integer to subsequent integer in integers (nil if non-existent).
 
-      If not, 
+        if next_integer truthy,
+          if integer greater than next_integer,
+            swap positions of integer and next_integer.
+            update swap_made to true.
+          end.
+        end.
+
+      end.
+
+      break unless swap_made truthy.
+    end.
+
+    return integers.
+  end.
+
+THE PLAN #2
+  
+
+
+
